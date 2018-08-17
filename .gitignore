@@ -4,6 +4,7 @@
 /LE-Mananger/Debug/*
 /Res/LE-Mananger.exe
 /.vs/*
+/LE-Mananger/.vs/LE-Mananger/v15
 
 *.log
 *.ipch
