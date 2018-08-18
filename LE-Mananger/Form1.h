@@ -1,5 +1,14 @@
 #pragma once
 
+#include <string>
+#include <iostream>
+#include <fstream> 
+#include <windows.h>
+#include <cstdlib> 
+
+#pragma comment (lib, "shell32.lib") 
+
+
 namespace LEMananger {
 
 	using namespace System;
@@ -8,25 +17,17 @@ namespace LEMananger {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
 
-	/// <summary>
-	/// Zusammenfassung fьr Form1
-	/// </summary>
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
 		Form1(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Konstruktorcode hier hinzufьgen.
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Verwendete Ressourcen bereinigen.
-		/// </summary>
 		~Form1()
 		{
 			if (components)
@@ -34,6 +35,7 @@ namespace LEMananger {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::PictureBox^  pictureBox2;
@@ -44,19 +46,16 @@ namespace LEMananger {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
 	protected:
 
 	private:
-		/// <summary>
-		/// Erforderliche Designervariable.
-		/// </summary>
 		System::ComponentModel::Container ^components;
 
+//- Стандартный код (можно свернуть)
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Erforderliche Methode fьr die Designerunterstьtzung.
-		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geдndert werden.
-		/// </summary>
 		void InitializeComponent(void)
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -69,6 +68,9 @@ namespace LEMananger {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -87,6 +89,7 @@ namespace LEMananger {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Open Radiant";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 			// pictureBox1
 			// 
@@ -208,6 +211,50 @@ namespace LEMananger {
 			this->button3->Text = L"Full compile";
 			this->button3->UseVisualStyleBackColor = true;
 			// 
+			// button4
+			// 
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
+				static_cast<System::Int32>(static_cast<System::Byte>(150)));
+			this->button4->Location = System::Drawing::Point(106, 61);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(124, 20);
+			this->button4->TabIndex = 10;
+			this->button4->Text = L"Open directory";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
+			// 
+			// label4
+			// 
+			this->label4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->label4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->ForeColor = System::Drawing::Color::Gainsboro;
+			this->label4->Location = System::Drawing::Point(87, 37);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(592, 16);
+			this->label4->TabIndex = 11;
+			this->label4->Text = L"...";
+			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// label5
+			// 
+			this->label5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->ForeColor = System::Drawing::Color::Gainsboro;
+			this->label5->Location = System::Drawing::Point(499, 21);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(180, 15);
+			this->label5->TabIndex = 12;
+			this->label5->Text = L"Working directory: ";
+			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -215,11 +262,14 @@ namespace LEMananger {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				static_cast<System::Int32>(static_cast<System::Byte>(38)));
 			this->ClientSize = System::Drawing::Size(700, 490);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->listBox1);
-			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
@@ -238,7 +288,101 @@ namespace LEMananger {
 
 		}
 #pragma endregion
-	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
+
+	private: Void Form1_Load(Object^  sender, EventArgs^  e) {
+		listBox1->Items->Clear();
+
+
+		//- Ищем файлы из папки Maps
+		WIN32_FIND_DATA wfd;
+		HANDLE const hFind = FindFirstFileW(L"../maps/*", &wfd);
+
+		if (INVALID_HANDLE_VALUE != hFind)
+		{
+			do
+			{
+				listBox1->Items->Add(String(wfd.cFileName).ToString());
+
+			} while (NULL != FindNextFileW(hFind, &wfd));
+
+			FindClose(hFind);
+
+			//- Удаляем лишние файлы которые формата не *.map
+			for (int i = 0; i < listBox1->Items->Count; i++)
+			{
+				if (listBox1->Items->Count > 2)
+				{
+					//- Удаляем не нужные точти
+					listBox1->Items->Remove(".."); listBox1->Items->Remove(".");
+
+					//- Проверяем соответсвие формата *.map
+					string str = SystemToStl(listBox1->Items[i]->ToString());
+					string format = str.erase(0, str.find_last_of('.') + 1);
+
+					if (format != "map")
+						listBox1->Items->RemoveAt(i);
+
+				}
+			}
+		}
 	}
-	};
+
+
+	//- Нажатие кнопки Open Radiant
+	private: Void button1_Click(Object^  sender, EventArgs^  e) {
+		//- Проверяем сколько элементов в списке
+		if (listBox1->Items->Count >= 0)
+		{
+			//- Проверяем на отрицательный результат
+			if(listBox1->SelectedIndex != -1)
+				label1->Text = listBox1->SelectedIndex.ToString();
+		}
+	}
+
+	//- Перевод из String в string
+	string SystemToStl(String ^s)
+	{
+		using namespace Runtime::InteropServices;
+		const char* ptr = (const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
+		return string(ptr);
+	}
+
+	//- Для перевода из string в LPCWSTR
+	wstring s2ws(const string& s)
+	{
+		int len, slength = (int)s.length() + 1;
+		len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
+		wchar_t* buf = new wchar_t[len];
+		MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+		wstring r(buf);
+
+		delete[] buf;
+		return r;
+	}
+
+	//- Открываем файл и получаем путь
+	string getPathDirectory(string filedir)
+	{
+		string lineFile; ifstream myfile;
+		myfile.open(filedir);
+
+		if (!myfile.is_open())
+			return 0;
+
+		getline(myfile, lineFile, '\0');
+
+		return lineFile;
+	}
+
+	//- Нажатие кнопки Open Directory
+	private: Void button4_Click(Object^  sender, EventArgs^  e) {
+		
+		label4->Text = String(getPathDirectory("configs/path_maps.txt").c_str()).ToString();
+
+		wstring stmp = s2ws(getPathDirectory("configs/path_maps.txt").c_str());
+		LPCWSTR a = stmp.c_str();
+
+		ShellExecute(NULL, L"open", L"explorer.exe", a, NULL, SW_SHOWDEFAULT);
+	}
+};
 }
