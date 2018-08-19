@@ -49,6 +49,20 @@ namespace LEMananger {
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::CheckBox^  checkBox1;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::CheckBox^  checkBox2;
+	private: System::Windows::Forms::CheckBox^  checkBox3;
+	private: System::Windows::Forms::CheckBox^  checkBox4;
+	private: System::Windows::Forms::CheckBox^  checkBox5;
+	private: System::Windows::Forms::CheckBox^  checkBox6;
+	private: System::Windows::Forms::CheckBox^  checkBox7;
+	private: System::Windows::Forms::TextBox^  textBox1;
+	private: System::Windows::Forms::PictureBox^  pictureBox4;
+	private: System::Windows::Forms::TextBox^  textBox2;
+	private: System::Windows::Forms::PictureBox^  pictureBox5;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
 	protected:
 
 	private:
@@ -71,9 +85,25 @@ namespace LEMananger {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox5 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox6 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox7 = (gcnew System::Windows::Forms::CheckBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -83,7 +113,7 @@ namespace LEMananger {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button1->Location = System::Drawing::Point(12, 408);
+			this->button1->Location = System::Drawing::Point(12, 420);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(231, 35);
 			this->button1->TabIndex = 0;
@@ -99,7 +129,7 @@ namespace LEMananger {
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->pictureBox1->Location = System::Drawing::Point(12, 12);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(676, 43);
+			this->pictureBox1->Size = System::Drawing::Size(741, 43);
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -109,9 +139,9 @@ namespace LEMananger {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->pictureBox2->Location = System::Drawing::Point(249, 441);
+			this->pictureBox2->Location = System::Drawing::Point(249, 453);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(439, 37);
+			this->pictureBox2->Size = System::Drawing::Size(504, 37);
 			this->pictureBox2->TabIndex = 2;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -122,7 +152,7 @@ namespace LEMananger {
 			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->label1->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label1->Location = System::Drawing::Point(604, 447);
+			this->label1->Location = System::Drawing::Point(669, 459);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(75, 26);
 			this->label1->TabIndex = 3;
@@ -151,7 +181,7 @@ namespace LEMananger {
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->pictureBox3->Location = System::Drawing::Point(12, 54);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(231, 424);
+			this->pictureBox3->Size = System::Drawing::Size(231, 436);
 			this->pictureBox3->TabIndex = 5;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -164,9 +194,9 @@ namespace LEMananger {
 			this->listBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->listBox1->ForeColor = System::Drawing::Color::Gainsboro;
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(15, 87);
+			this->listBox1->Location = System::Drawing::Point(20, 87);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(225, 299);
+			this->listBox1->Size = System::Drawing::Size(216, 299);
 			this->listBox1->TabIndex = 6;
 			// 
 			// button2
@@ -178,7 +208,7 @@ namespace LEMananger {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button2->Location = System::Drawing::Point(12, 443);
+			this->button2->Location = System::Drawing::Point(12, 455);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(115, 35);
 			this->button2->TabIndex = 7;
@@ -204,7 +234,7 @@ namespace LEMananger {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button3->Location = System::Drawing::Point(127, 443);
+			this->button3->Location = System::Drawing::Point(127, 455);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(116, 35);
 			this->button3->TabIndex = 9;
@@ -233,7 +263,7 @@ namespace LEMananger {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label4->Location = System::Drawing::Point(87, 37);
+			this->label4->Location = System::Drawing::Point(152, 37);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(592, 16);
 			this->label4->TabIndex = 11;
@@ -248,12 +278,178 @@ namespace LEMananger {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label5->Location = System::Drawing::Point(499, 21);
+			this->label5->Location = System::Drawing::Point(564, 21);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(180, 15);
 			this->label5->TabIndex = 12;
 			this->label5->Text = L"Working directory: ";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox1->Location = System::Drawing::Point(265, 177);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(52, 17);
+			this->checkBox1->TabIndex = 13;
+			this->checkBox1->Text = L"-meta";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
+				static_cast<System::Int32>(static_cast<System::Byte>(38)));
+			this->label6->ForeColor = System::Drawing::Color::Gainsboro;
+			this->label6->Location = System::Drawing::Point(262, 75);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(158, 13);
+			this->label6->TabIndex = 14;
+			this->label6->Text = L"Select the arguments to compile";
+			// 
+			// checkBox2
+			// 
+			this->checkBox2->AutoCheck = false;
+			this->checkBox2->AutoSize = true;
+			this->checkBox2->Checked = true;
+			this->checkBox2->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->checkBox2->Enabled = false;
+			this->checkBox2->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox2->Location = System::Drawing::Point(323, 177);
+			this->checkBox2->Name = L"checkBox2";
+			this->checkBox2->Size = System::Drawing::Size(46, 17);
+			this->checkBox2->TabIndex = 15;
+			this->checkBox2->Text = L"-bsp";
+			this->checkBox2->UseVisualStyleBackColor = true;
+			// 
+			// checkBox3
+			// 
+			this->checkBox3->AutoSize = true;
+			this->checkBox3->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox3->Location = System::Drawing::Point(378, 177);
+			this->checkBox3->Name = L"checkBox3";
+			this->checkBox3->Size = System::Drawing::Size(42, 17);
+			this->checkBox3->TabIndex = 16;
+			this->checkBox3->Text = L"-vis";
+			this->checkBox3->UseVisualStyleBackColor = true;
+			// 
+			// checkBox4
+			// 
+			this->checkBox4->AutoSize = true;
+			this->checkBox4->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox4->Location = System::Drawing::Point(426, 177);
+			this->checkBox4->Name = L"checkBox4";
+			this->checkBox4->Size = System::Drawing::Size(48, 17);
+			this->checkBox4->TabIndex = 17;
+			this->checkBox4->Text = L"-light";
+			this->checkBox4->UseVisualStyleBackColor = true;
+			// 
+			// checkBox5
+			// 
+			this->checkBox5->AutoSize = true;
+			this->checkBox5->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox5->Location = System::Drawing::Point(480, 177);
+			this->checkBox5->Name = L"checkBox5";
+			this->checkBox5->Size = System::Drawing::Size(46, 17);
+			this->checkBox5->TabIndex = 18;
+			this->checkBox5->Text = L"-fast";
+			this->checkBox5->UseVisualStyleBackColor = true;
+			// 
+			// checkBox6
+			// 
+			this->checkBox6->AutoSize = true;
+			this->checkBox6->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox6->Location = System::Drawing::Point(532, 177);
+			this->checkBox6->Name = L"checkBox6";
+			this->checkBox6->Size = System::Drawing::Size(48, 17);
+			this->checkBox6->TabIndex = 19;
+			this->checkBox6->Text = L"-filter";
+			this->checkBox6->UseVisualStyleBackColor = true;
+			// 
+			// checkBox7
+			// 
+			this->checkBox7->AutoSize = true;
+			this->checkBox7->ForeColor = System::Drawing::Color::Gainsboro;
+			this->checkBox7->Location = System::Drawing::Point(586, 177);
+			this->checkBox7->Name = L"checkBox7";
+			this->checkBox7->Size = System::Drawing::Size(64, 17);
+			this->checkBox7->TabIndex = 20;
+			this->checkBox7->Text = L"-saveprt";
+			this->checkBox7->UseVisualStyleBackColor = true;
+			// 
+			// textBox1
+			// 
+			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox1->ForeColor = System::Drawing::Color::Gainsboro;
+			this->textBox1->Location = System::Drawing::Point(272, 142);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(461, 13);
+			this->textBox1->TabIndex = 21;
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->pictureBox4->Location = System::Drawing::Point(265, 135);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(475, 27);
+			this->pictureBox4->TabIndex = 22;
+			this->pictureBox4->TabStop = false;
+			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox2->Enabled = false;
+			this->textBox2->ForeColor = System::Drawing::Color::Gainsboro;
+			this->textBox2->Location = System::Drawing::Point(272, 251);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(454, 13);
+			this->textBox2->TabIndex = 23;
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->pictureBox5->Location = System::Drawing::Point(265, 244);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(468, 27);
+			this->pictureBox5->TabIndex = 24;
+			this->pictureBox5->TabStop = false;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
+				static_cast<System::Int32>(static_cast<System::Byte>(38)));
+			this->label7->ForeColor = System::Drawing::Color::Gainsboro;
+			this->label7->Location = System::Drawing::Point(262, 217);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(160, 13);
+			this->label7->TabIndex = 25;
+			this->label7->Text = L"Select the arguments to run map";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->ForeColor = System::Drawing::Color::Gainsboro;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(10) {
+				L"- ALL", L"[Normal Mode]", L"[Fast mode]", L"[Final mode]",
+					L"- Single", L"[BSP -meta]  Ч> Single BSP", L"[BSP -vis]  Ч> Single VIS", L"[BSP -vis -fast]  Ч> Single fast VIS", L"[BSP -light -fast -super 2 -filter -bounce 8]  Ч> lightmap in good quality",
+					L"[BSP -light -fast -super 2]"
+			});
+			this->comboBox1->Location = System::Drawing::Point(265, 106);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(475, 21);
+			this->comboBox1->TabIndex = 26;
+			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::comboBox1_SelectedIndexChanged);
 			// 
 			// Form1
 			// 
@@ -261,7 +457,20 @@ namespace LEMananger {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				static_cast<System::Int32>(static_cast<System::Byte>(38)));
-			this->ClientSize = System::Drawing::Size(700, 490);
+			this->ClientSize = System::Drawing::Size(765, 502);
+			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->pictureBox5);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->checkBox7);
+			this->Controls->Add(this->checkBox6);
+			this->Controls->Add(this->checkBox5);
+			this->Controls->Add(this->checkBox4);
+			this->Controls->Add(this->checkBox3);
+			this->Controls->Add(this->checkBox2);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label4);
@@ -275,6 +484,7 @@ namespace LEMananger {
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pictureBox3);
+			this->Controls->Add(this->pictureBox4);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->MinimizeBox = false;
 			this->Name = L"Form1";
@@ -283,6 +493,8 @@ namespace LEMananger {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -384,5 +596,129 @@ namespace LEMananger {
 
 		ShellExecute(NULL, L"open", L"explorer.exe", a, NULL, SW_SHOWDEFAULT);
 	}
+
+	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+		/*
+		  //
+		    –ежимы
+		  //
+			0 - ALL
+			1 [Normal Mode]
+			2 [Fast mode]
+			3 [Final mode]
+			4 - Single
+			5 [BSP -meta]  Ч> Single BSP
+			6 [BSP -vis]  Ч> Single VIS
+			7 [BSP -vis -fast]  Ч> Single fast VIS
+			8 [BSP -light -fast -super 2 -filter -bounce 8]  Ч> lightmap in good quality
+			9 [BSP -light -fast -super 2]		
+		  //
+
+		  //
+		     омпоненты дл€ понимани€
+		  //
+		    checkBox1 -meta
+			checkBox2 -bsp
+			checkBox3 -vis
+			checkBox4 -light
+			checkBox5 -fast
+			checkBox6 -filter
+			checkBox7 -saveprt
+		  //
+		*/
+		
+		//- ”ходим от ошибок
+		if (comboBox1->SelectedIndex == 0)
+			comboBox1->SelectedIndex = 1;
+
+		if (comboBox1->SelectedIndex == 4)
+			comboBox1->SelectedIndex = 5;
+
+		//- ¬ыдел€ем компоненты от пресетов
+		if (comboBox1->SelectedIndex == 1)
+		{
+			textBox1->Text = "";
+			checkBox1->Checked = true;
+			checkBox3->Checked = true;
+			checkBox4->Checked = true;
+
+			checkBox5->Checked = false;
+			checkBox6->Checked = false;
+			checkBox7->Checked = false;
+		}
+		if (comboBox1->SelectedIndex == 2)
+		{
+			textBox1->Text = "-super 2";
+			checkBox1->Checked = true;
+			checkBox3->Checked = true;
+			checkBox4->Checked = true;
+			checkBox5->Checked = true;
+
+			checkBox6->Checked = false;
+			checkBox7->Checked = false;
+		}
+		if (comboBox1->SelectedIndex == 3)
+		{
+			textBox1->Text = "-super 2 -bounce 8";
+			checkBox1->Checked = true;
+			checkBox3->Checked = true;
+			checkBox4->Checked = true;
+			checkBox5->Checked = true;
+
+			checkBox6->Checked = true;
+			checkBox7->Checked = false;
+		}
+
+		if (comboBox1->SelectedIndex == 5)
+		{
+			textBox1->Text = "";
+			checkBox1->Checked = true;
+			checkBox3->Checked = false;
+			checkBox4->Checked = false;
+			checkBox5->Checked = false;
+			checkBox6->Checked = false;
+			checkBox7->Checked = false;
+		}
+		if (comboBox1->SelectedIndex == 6)
+		{
+			textBox1->Text = "";
+			checkBox1->Checked = false;
+			checkBox3->Checked = true;
+			checkBox4->Checked = false;
+			checkBox5->Checked = false;
+			checkBox6->Checked = false;
+			checkBox7->Checked = false;
+		}
+		if (comboBox1->SelectedIndex == 7)
+		{
+			textBox1->Text = "";
+			checkBox1->Checked = false;
+			checkBox3->Checked = true;
+			checkBox4->Checked = false;
+			checkBox5->Checked = true;
+			checkBox6->Checked = false;
+			checkBox7->Checked = false;
+		}
+		if (comboBox1->SelectedIndex == 8)
+		{
+			textBox1->Text = "-super 2 -bounce 8";
+			checkBox1->Checked = false;
+			checkBox3->Checked = false;
+			checkBox4->Checked = true;
+			checkBox5->Checked = true;
+			checkBox6->Checked = true;
+			checkBox7->Checked = false;
+		}
+		if (comboBox1->SelectedIndex == 9)
+		{
+			textBox1->Text = "-super 2";
+			checkBox1->Checked = false;
+			checkBox3->Checked = false;
+			checkBox4->Checked = true;
+			checkBox5->Checked = true;
+			checkBox6->Checked = false;
+			checkBox7->Checked = false;
+		}
+	}		
 };
 }
