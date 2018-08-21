@@ -567,9 +567,9 @@ namespace LEMananger {
 		myfile.open(filedir);
 
 		if (!myfile.is_open())
-			return 0;
+			return "";
 
-		getline(myfile, lineFile, '\0');
+		getline(myfile, lineFile );
 
 		return lineFile;
 	}
@@ -716,9 +716,24 @@ namespace LEMananger {
 			//- Компиляция карты
 			string tmp = getPathDirectory("configs/path_radiant.str");
 
-			String^ tmp2 = gcnew System::String(tmp.c_str());
-			tmp2 = tmp2->Replace("\\", "\\\\") + "\\\\q3map2.exe";
+			if ( tmp.empty() )
+			{
+				//TODO: [zombiHello] Оброботать исключение, что путь мы можем не получить
+				return;
+			}
 
+			String^ tmp2 = gcnew System::String(tmp.c_str());
+			tmp2 += "\\q3map2.exe";
+
+			// проверяем на существование q3map2
+
+			ifstream File( tmp + "\\q3map2.exe", ios::in | ios::_Nocreate );
+
+			if ( !File.is_open() )
+			{
+				//TODO: [zombiHello] Оброботать исключение, что файла нет
+				return;
+			}
 
 			Process^ myProcess = gcnew Process;
 
