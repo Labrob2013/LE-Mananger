@@ -3,10 +3,34 @@
 
 /LE-Mananger/Debug/*
 /Res/LE-Mananger.exe
+/LE-Mananger/.vs/*
 /.vs/*
+/radiant/*.dll
+/radiant/*.exe
+/radiant/*.xml
+/radiant/*.pref
+/radiant/*.png
+/radiant/*.sh
+/radiant/*.conf
+/radiant/*.dtd
+/radiant/*.immodules
+/radiant/*.modules
+/radiant/*.engine
+/radiant/*.config
+/radiant/*.xlink
+/radiant/*.def
+/radiant/*.proj
+/radiant/*.shader
+/radiant/shaderlist.txt
+/radiant/*.tga
+/radiant/*.jpg
+/radiant/*.bmp
+/radiant/.svn
 
 *.log
+*.ilk
 *.ipch
+*.exp
 *.VC.db
 *.opendb
 *.metagen

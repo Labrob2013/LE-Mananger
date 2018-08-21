@@ -14,9 +14,11 @@ namespace LEMananger {
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
+	using namespace System::Diagnostics;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+
 	using namespace std;
 
 	public ref class Form1 : public System::Windows::Forms::Form
@@ -45,7 +47,7 @@ namespace LEMananger {
 	private: System::Windows::Forms::ListBox^  listBox1;
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::Button^  button3;
+
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
@@ -81,7 +83,6 @@ namespace LEMananger {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -113,7 +114,7 @@ namespace LEMananger {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button1->Location = System::Drawing::Point(12, 420);
+			this->button1->Location = System::Drawing::Point(12, 417);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(231, 35);
 			this->button1->TabIndex = 0;
@@ -129,7 +130,7 @@ namespace LEMananger {
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->pictureBox1->Location = System::Drawing::Point(12, 12);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(741, 43);
+			this->pictureBox1->Size = System::Drawing::Size(749, 43);
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -139,9 +140,9 @@ namespace LEMananger {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->pictureBox2->Location = System::Drawing::Point(249, 453);
+			this->pictureBox2->Location = System::Drawing::Point(249, 450);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(504, 37);
+			this->pictureBox2->Size = System::Drawing::Size(512, 37);
 			this->pictureBox2->TabIndex = 2;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -152,7 +153,7 @@ namespace LEMananger {
 			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->label1->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label1->Location = System::Drawing::Point(669, 459);
+			this->label1->Location = System::Drawing::Point(677, 456);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(75, 26);
 			this->label1->TabIndex = 3;
@@ -181,7 +182,7 @@ namespace LEMananger {
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->pictureBox3->Location = System::Drawing::Point(12, 54);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(231, 436);
+			this->pictureBox3->Size = System::Drawing::Size(231, 433);
 			this->pictureBox3->TabIndex = 5;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -196,7 +197,7 @@ namespace LEMananger {
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->Location = System::Drawing::Point(20, 87);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(216, 299);
+			this->listBox1->Size = System::Drawing::Size(216, 286);
 			this->listBox1->TabIndex = 6;
 			// 
 			// button2
@@ -208,12 +209,13 @@ namespace LEMananger {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button2->Location = System::Drawing::Point(12, 455);
+			this->button2->Location = System::Drawing::Point(12, 452);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(115, 35);
+			this->button2->Size = System::Drawing::Size(231, 35);
 			this->button2->TabIndex = 7;
 			this->button2->Text = L"Checked compile";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
 			// label3
 			// 
@@ -226,20 +228,6 @@ namespace LEMananger {
 			this->label3->Size = System::Drawing::Size(48, 13);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Maps list";
-			// 
-			// button3
-			// 
-			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
-				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button3->Location = System::Drawing::Point(127, 455);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(116, 35);
-			this->button3->TabIndex = 9;
-			this->button3->Text = L"Full compile";
-			this->button3->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
@@ -263,7 +251,7 @@ namespace LEMananger {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label4->Location = System::Drawing::Point(152, 37);
+			this->label4->Location = System::Drawing::Point(160, 37);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(592, 16);
 			this->label4->TabIndex = 11;
@@ -278,11 +266,11 @@ namespace LEMananger {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label5->Location = System::Drawing::Point(564, 21);
+			this->label5->Location = System::Drawing::Point(572, 21);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(180, 15);
 			this->label5->TabIndex = 12;
-			this->label5->Text = L"Working directory: ";
+			this->label5->Text = L"Working directory:";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// checkBox1
@@ -314,7 +302,6 @@ namespace LEMananger {
 			this->checkBox2->AutoSize = true;
 			this->checkBox2->Checked = true;
 			this->checkBox2->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox2->Enabled = false;
 			this->checkBox2->ForeColor = System::Drawing::Color::Gainsboro;
 			this->checkBox2->Location = System::Drawing::Point(323, 177);
 			this->checkBox2->Name = L"checkBox2";
@@ -457,7 +444,8 @@ namespace LEMananger {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				static_cast<System::Int32>(static_cast<System::Byte>(38)));
-			this->ClientSize = System::Drawing::Size(765, 502);
+			this->ClientSize = System::Drawing::Size(773, 499);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->textBox2);
@@ -473,9 +461,7 @@ namespace LEMananger {
 			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->listBox1);
@@ -504,11 +490,14 @@ namespace LEMananger {
 	private: Void Form1_Load(Object^  sender, EventArgs^  e) {
 		listBox1->Items->Clear();
 
+		//- Назначаем пресет для компиляции карт
+		comboBox1->SelectedIndex = 1;
 
 		//- Ищем файлы из папки Maps
 		WIN32_FIND_DATA wfd;
 		HANDLE const hFind = FindFirstFileW(L"../maps/*", &wfd);
 
+		//- Поиск и сортировка в лист
 		if (INVALID_HANDLE_VALUE != hFind)
 		{
 			do
@@ -533,7 +522,6 @@ namespace LEMananger {
 
 					if (format != "map")
 						listBox1->Items->RemoveAt(i);
-
 				}
 			}
 		}
@@ -589,9 +577,9 @@ namespace LEMananger {
 	//- Нажатие кнопки Open Directory
 	private: Void button4_Click(Object^  sender, EventArgs^  e) {
 		
-		label4->Text = String(getPathDirectory("configs/path_maps.txt").c_str()).ToString();
+		label4->Text = String(getPathDirectory("configs/path_maps.str").c_str()).ToString();
 
-		wstring stmp = s2ws(getPathDirectory("configs/path_maps.txt").c_str());
+		wstring stmp = s2ws(getPathDirectory("configs/path_maps.str").c_str());
 		LPCWSTR a = stmp.c_str();
 
 		ShellExecute(NULL, L"open", L"explorer.exe", a, NULL, SW_SHOWDEFAULT);
@@ -719,6 +707,44 @@ namespace LEMananger {
 			checkBox6->Checked = false;
 			checkBox7->Checked = false;
 		}
-	}		
+	}	
+
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		//- Проверяем сколько элементов в списке
+		if (listBox1->Items->Count >= 0)
+		{
+			//- Компиляция карты
+			string tmp = getPathDirectory("configs/path_radiant.str");
+
+			String^ tmp2 = gcnew System::String(tmp.c_str());
+			tmp2 = tmp2->Replace("\\", "\\\\") + "\\\\q3map2.exe";
+
+
+			Process^ myProcess = gcnew Process;
+
+
+			//- Проверяем на отрицательный результат
+			if (listBox1->SelectedIndex != -1)
+			{
+				//label1->Text = listBox1->GetItemText(listBox1->SelectedItem);
+
+				myProcess->StartInfo->FileName = tmp2;
+				myProcess->StartInfo->Arguments = "";
+				//myProcess->StartInfo->RedirectStandardInput = true;
+				myProcess->StartInfo->UseShellExecute = false;
+				myProcess->Start();
+
+				/*using (StreamWriter pWriter = process.StandardInput)
+				{
+					if (pWriter.BaseStream.CanWrite)
+					{
+						foreach(var line in commands.Split('\n'))
+							pWriter.WriteLine(line);
+					}
+				}*/
+
+			}		
+		}
+	}
 };
 }
