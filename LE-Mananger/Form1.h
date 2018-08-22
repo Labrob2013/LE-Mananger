@@ -17,6 +17,7 @@ namespace LEMananger {
 	using namespace System::Diagnostics;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
+	using namespace System::IO;
 	using namespace System::Drawing;
 
 	using namespace std;
@@ -65,6 +66,8 @@ namespace LEMananger {
 	private: System::Windows::Forms::PictureBox^  pictureBox5;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::Label^  label8;
+
 	protected:
 
 	private:
@@ -100,6 +103,7 @@ namespace LEMananger {
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -114,7 +118,7 @@ namespace LEMananger {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button1->Location = System::Drawing::Point(12, 417);
+			this->button1->Location = System::Drawing::Point(12, 413);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(231, 35);
 			this->button1->TabIndex = 0;
@@ -130,7 +134,7 @@ namespace LEMananger {
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->pictureBox1->Location = System::Drawing::Point(12, 12);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(749, 43);
+			this->pictureBox1->Size = System::Drawing::Size(741, 43);
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -140,9 +144,9 @@ namespace LEMananger {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->pictureBox2->Location = System::Drawing::Point(249, 450);
+			this->pictureBox2->Location = System::Drawing::Point(249, 446);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(512, 37);
+			this->pictureBox2->Size = System::Drawing::Size(504, 37);
 			this->pictureBox2->TabIndex = 2;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -153,7 +157,7 @@ namespace LEMananger {
 			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->label1->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label1->Location = System::Drawing::Point(677, 456);
+			this->label1->Location = System::Drawing::Point(669, 452);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(75, 26);
 			this->label1->TabIndex = 3;
@@ -182,7 +186,7 @@ namespace LEMananger {
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
 			this->pictureBox3->Location = System::Drawing::Point(12, 54);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(231, 433);
+			this->pictureBox3->Size = System::Drawing::Size(231, 429);
 			this->pictureBox3->TabIndex = 5;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -197,7 +201,7 @@ namespace LEMananger {
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->Location = System::Drawing::Point(20, 87);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(216, 286);
+			this->listBox1->Size = System::Drawing::Size(216, 273);
 			this->listBox1->TabIndex = 6;
 			// 
 			// button2
@@ -209,7 +213,7 @@ namespace LEMananger {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(150)));
-			this->button2->Location = System::Drawing::Point(12, 452);
+			this->button2->Location = System::Drawing::Point(12, 448);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(231, 35);
 			this->button2->TabIndex = 7;
@@ -251,7 +255,7 @@ namespace LEMananger {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label4->Location = System::Drawing::Point(160, 37);
+			this->label4->Location = System::Drawing::Point(152, 37);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(592, 16);
 			this->label4->TabIndex = 11;
@@ -266,7 +270,7 @@ namespace LEMananger {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->ForeColor = System::Drawing::Color::Gainsboro;
-			this->label5->Location = System::Drawing::Point(572, 21);
+			this->label5->Location = System::Drawing::Point(564, 21);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(180, 15);
 			this->label5->TabIndex = 12;
@@ -438,13 +442,27 @@ namespace LEMananger {
 			this->comboBox1->TabIndex = 26;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::comboBox1_SelectedIndexChanged);
 			// 
+			// label8
+			// 
+			this->label8->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			this->label8->ForeColor = System::Drawing::Color::Gainsboro;
+			this->label8->Location = System::Drawing::Point(253, 451);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(410, 29);
+			this->label8->TabIndex = 27;
+			this->label8->Text = L"Состояние:\r\nГотово!";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				static_cast<System::Int32>(static_cast<System::Byte>(38)));
-			this->ClientSize = System::Drawing::Size(773, 499);
+			this->ClientSize = System::Drawing::Size(765, 495);
+			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label7);
@@ -525,18 +543,31 @@ namespace LEMananger {
 				}
 			}
 		}
+
+		string tmp_le = getPathDirectory("configs/path_lifeengine.str");
+
+		if (tmp_le.empty())
+		{
+			label8->Text = "Status:\nError! You made a mistake with the program's paths restart the file path.exe!";
+			return;
+		}
+
+		label4->Text = gcnew String(tmp_le.c_str());
 	}
 
 
 	//- Нажатие кнопки Open Radiant
 	private: Void button1_Click(Object^  sender, EventArgs^  e) {
-		//- Проверяем сколько элементов в списке
-		if (listBox1->Items->Count >= 0)
+		
+		string tmp_le = getPathDirectory("configs/path_radiant.str");
+
+		if (tmp_le.empty())
 		{
-			//- Проверяем на отрицательный результат
-			if(listBox1->SelectedIndex != -1)
-				label1->Text = listBox1->SelectedIndex.ToString();
+			label8->Text = "Status:\nError! You made a mistake with the program's paths restart the file path.exe!";
+			return;
 		}
+		tmp_le = tmp_le + "\\radiant.exe";
+		system(tmp_le.c_str());
 	}
 
 	//- Перевод из String в string
@@ -710,28 +741,35 @@ namespace LEMananger {
 	}	
 
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		//- Компиляция карты
+
 		//- Проверяем сколько элементов в списке
 		if (listBox1->Items->Count >= 0)
 		{
-			//- Компиляция карты
-			string tmp = getPathDirectory("configs/path_radiant.str");
+			//- Выводим ошибку если не выделен элемент
+			if (listBox1->SelectedIndex == -1)
+				label8->Text = "Status:\nError! Select a map to compile from the list!";
 
-			if ( tmp.empty() )
+
+			string tmp = getPathDirectory("configs/path_radiant.str");
+			string tmp_map = getPathDirectory("configs/path_maps.str");
+			string tmp_le = getPathDirectory("configs/path_lifeengine.str");
+
+			if (tmp.empty() && tmp_map.empty() && tmp_le.empty())
 			{
-				//TODO: [zombiHello] Оброботать исключение, что путь мы можем не получить
+				label8->Text = "Status:\nError! You made a mistake with the program's paths restart the file path.exe!";
 				return;
 			}
 
-			String^ tmp2 = gcnew System::String(tmp.c_str());
+			String^ tmp2 = gcnew String(tmp.c_str());
 			tmp2 += "\\q3map2.exe";
 
-			// проверяем на существование q3map2
+			//- Проверяем на существование q3map2
+			ifstream File(SystemToStl(tmp2), ios::in | ios::_Nocreate );
 
-			ifstream File( tmp + "\\q3map2.exe", ios::in | ios::_Nocreate );
-
-			if ( !File.is_open() )
+			if (!File.is_open())
 			{
-				//TODO: [zombiHello] Оброботать исключение, что файла нет
+				label8->Text = "Status:\nError! there is no file \"q3map2.exe\" in the folder radiant!";
 				return;
 			}
 
@@ -741,23 +779,42 @@ namespace LEMananger {
 			//- Проверяем на отрицательный результат
 			if (listBox1->SelectedIndex != -1)
 			{
-				//label1->Text = listBox1->GetItemText(listBox1->SelectedItem);
+				String^ file_mapname = listBox1->GetItemText(listBox1->SelectedItem);
+
+				//- Копируем карты для компиляции
+				system("precomp.exe");
 
 				myProcess->StartInfo->FileName = tmp2;
-				myProcess->StartInfo->Arguments = "";
-				//myProcess->StartInfo->RedirectStandardInput = true;
+				myProcess->StartInfo->WorkingDirectory = gcnew String(tmp_le.c_str());
+
+				//- Подсчитываем аргументы
+				String^ argc = "bsp -fs_basepath \"" + 
+					gcnew String(tmp_le.c_str()) + "\"";
+
+				if (textBox1->Text != "") argc += textBox1->Text + " ";
+
+				if (checkBox1->Checked) argc += "-meta ";
+				if (checkBox3->Checked) argc += "-vis ";
+				if (checkBox4->Checked) argc += "-light ";
+				if (checkBox5->Checked) argc += "-fast ";
+				if (checkBox6->Checked) argc += "-filter ";
+				if (checkBox7->Checked) argc += "-saveprt ";
+
+				argc += "\"" + gcnew String(tmp_le.c_str()) + "\\" + file_mapname + "\"";
+
+				//- Задаем аргументы
+				myProcess->StartInfo->Arguments = argc;
 				myProcess->StartInfo->UseShellExecute = false;
+
+				label8->Text = "Status:\nMapping is in progress " + file_mapname + "!";
 				myProcess->Start();
 
-				/*using (StreamWriter pWriter = process.StandardInput)
-				{
-					if (pWriter.BaseStream.CanWrite)
-					{
-						foreach(var line in commands.Split('\n'))
-							pWriter.WriteLine(line);
-					}
-				}*/
+				myProcess->WaitForExit();
 
+				//- Копируем карты в папку с картами в движке
+				system("process.exe");
+
+				label8->Text = "Status:\nDone! ";
 			}		
 		}
 	}

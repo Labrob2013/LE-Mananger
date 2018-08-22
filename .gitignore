@@ -2,7 +2,8 @@
 .DS_Store
 
 /LE-Mananger/Debug/*
-/Res/LE-Mananger.exe
+/LEMananger/LE-Mananger.exe
+/LEMananger/configs/*
 /LE-Mananger/.vs/*
 /.vs/*
 /radiant/*.dll
@@ -26,6 +27,13 @@
 /radiant/*.jpg
 /radiant/*.bmp
 /radiant/.svn
+
+/lifeEngine/bin-release/*
+/lifeEngine/maps/*
+/lifeEngine/models/*
+/lifeEngine/scripts/*
+/lifeEngine/shaders/*
+/lifeEngine/textures/*
 
 *.log
 *.ilk
