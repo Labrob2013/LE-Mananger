@@ -2,7 +2,8 @@
 .DS_Store
 
 /LE-Mananger/Debug/*
-/LEMananger/LE-Mananger.exe
+/LEMananger/LE-Mananger_debug.exe
+/LEMananger/LE-Mananger_release.exe
 /LEMananger/configs/*
 /LE-Mananger/.vs/*
 /.vs/*
